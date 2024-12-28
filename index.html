@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气查询</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>天气查询系统</h1>
+        <div class="search-box">
+            <div class="search-input-container">
+                <input type="text" id="city-input" placeholder="请输入城市名称（如：北京）" autocomplete="off">
+                <div id="city-list" class="city-list"></div>
+            </div>
+            <button onclick="getWeatherByInput()">查询天气</button>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <div class="basic-info">
+                <div class="city"></div>
+                <div class="update-time"></div>
+            </div>
+            <div class="current-weather">
+                <div class="temperature"></div>
+                <div class="weather-text"></div>
+                <div class="wind"></div>
+                <div class="humidity"></div>
+            </div>
+            <div class="forecast" id="forecast">
+                <!-- 预报信息将通过JavaScript动态添加 -->
+            </div>
+        </div>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
